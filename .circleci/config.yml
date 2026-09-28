@@ -2,7 +2,10 @@ version: 2
 jobs:
   build:
     macos:
-      xcode: '13.4.1'
+      xcode: '15.4.0'
+    resource_class: m4pro.medium
+    environment:
+      NODE_OPTIONS: --openssl-legacy-provider
     steps:
       - checkout
       - run: yarn
